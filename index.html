@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game - Javascript</title>
-    <script type="text/javascript" src="rock-paper-scissors.js"></script>
+    <title>Rock, Paper, Scissors Game - JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" /> 
+    <script src="https://kit.fontawesome.com/bbaba8ef75.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <script>
-
-        //loop each round 5 times
-        function game() {
-            //play 5 rounds
-            let rounds = 5;
-
-            for (let i = 1; i <= rounds; i++) {
-                //display current round
-                console.log('Round: ' + i)
-
-                //ask users selection each round
-                const playerSelection = prompt('Rock, Paper or Scissors?');
-
-                //cancel game if user selects cancel or if value is empty
-                if (playerSelection === null || playerSelection === '') {
-                    console.log('Canceled');
-                    return 'Canceled'
-                }
-
-                //call playRound function and display result
-                console.log(playRound(playerSelection, getComputerChoice()));
-            }
-        }
-
-        //start game
-        game()
-
-    </script>
+    <div class="container">
+        <div class="col">
+            <div class="rock"><i class="fa-solid fa-hand-back-fist"></i><p class="small">Rock</p></div>
+            <div class="paper"><i class="fa-solid fa-hand"></i><p class="small">Paper</p></div>
+            <div class="scissors"><i class="fa-solid fa-hand-scissors"></i><p class="small">Scissors</p></div>
+        </div>
+        <div class="col">
+            <div class="score">
+                <div class="rounds"><h2>Round</h2><p>0</p></div>
+                <div class="user-score"><h2>Your score</h2><p>0</p></div>
+                <div class="computer-score"><h2>Computer's score</h2><p>0</p></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="msg"></div>
+        </div>
+        <div class="col">
+            <div class="winner"><p></p></div>
+        </div>
+        <div class="col"><button class="reset">RESET GAME</button></div>
+    </div>
+    <script type="text/javascript" src="rock-paper-scissors.js"></script>
 </body>
 </html>
