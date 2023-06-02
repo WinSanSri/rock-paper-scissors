@@ -9,9 +9,33 @@
 </head>
 <body>
     <script>
-        const playerSelection = "ROck";
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
+
+        //loop each round 5 times
+        function game() {
+            //play 5 rounds
+            let rounds = 5;
+
+            for (let i = 1; i <= rounds; i++) {
+                //display current round
+                console.log('Round: ' + i)
+
+                //ask users selection each round
+                const playerSelection = prompt('Rock, Paper or Scissors?');
+
+                //cancel game if user selects cancel or if value is empty
+                if (playerSelection === null || playerSelection === '') {
+                    console.log('Canceled');
+                    return 'Canceled'
+                }
+
+                //call playRound function and display result
+                console.log(playRound(playerSelection, getComputerChoice()));
+            }
+        }
+
+        //start game
+        game()
+
     </script>
 </body>
 </html>
