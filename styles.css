@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(39, 39, 39);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.score {
+    display: flex;
+    gap: 30px;
+}
+
+.user-score {
+    font-weight: 800;
+    color: black;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+p.small {
+    font-size: 1rem;
+}
+
+.rock, .paper, .scissors {
+    text-align: center;
+    padding: 10px;
+    transition: all .2s ease-in-out; 
+}
+
+.rock:hover, .paper:hover, .scissors:hover, button.reset:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.fa-solid {
+    font-size: 5rem;
+}
+
+button.reset {
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: all .2s ease-in-out; 
+}
+
+h2 {
+    font-size: 1rem;
+}
