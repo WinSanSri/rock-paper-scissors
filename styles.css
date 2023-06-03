@@ -5,32 +5,45 @@
 body {
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(39, 39, 39);
+    color: rgb(61, 61, 61);
     padding: 0;
     margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin-top: 30px;
+    background-color: rgb(240, 240, 240);
+    border: solid 1px rgb(212, 212, 212);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .col {
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
 .score {
     display: flex;
     gap: 30px;
+    padding: 0 30px;
+    border: solid 1px rgb(212, 212, 212);
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
 }
 
 .user-score {
-    font-weight: 800;
-    color: black;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
 }
 
 p {
@@ -44,17 +57,21 @@ p.small {
 
 .rock, .paper, .scissors {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     transition: all .2s ease-in-out; 
+}
+
+.msg {
+    padding: 10px;
 }
 
 .rock:hover, .paper:hover, .scissors:hover, button.reset:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .fa-solid {
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 
 button.reset {
@@ -64,9 +81,26 @@ button.reset {
     color: white;
     border: none;
     border-radius: 3px;
-    transition: all .2s ease-in-out; 
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    p {
+        font-size: 1.2rem;
+    }
+
+    p.small {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
 }
