@@ -26,7 +26,7 @@ resetBtn.addEventListener('click', function() {
     showUserScore.innerHTML = "0";
     showComputerScore.innerHTML = "0";
     showWinner.innerHTML = "";
-    showMsg.innerHTML = "";
+    showMsg.innerHTML = "Make your move!";
 });
 
 function game(userSelection) {
