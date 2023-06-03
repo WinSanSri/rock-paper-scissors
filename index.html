@@ -10,27 +10,29 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="col">
-            <div class="rock"><i class="fa-solid fa-hand-back-fist"></i><p class="small">Rock</p></div>
-            <div class="paper"><i class="fa-solid fa-hand"></i><p class="small">Paper</p></div>
-            <div class="scissors"><i class="fa-solid fa-hand-scissors"></i><p class="small">Scissors</p></div>
-        </div>
-        <div class="col">
-            <div class="score">
-                <div class="rounds"><h2>Round</h2><p>0</p></div>
-                <div class="user-score"><h2>Your score</h2><p>0</p></div>
-                <div class="computer-score"><h2>Computer's score</h2><p>0</p></div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="col">
+                <div class="score">
+                    <div class="rounds"><h2>Round</h2><p>0</p></div>
+                    <div class="user-score"><h2>You</h2><p>0</p></div>
+                    <div class="computer-score"><h2>Computer</h2><p>0</p></div>
+                </div>
             </div>
+            <div class="col">
+                <div class="rock"><i class="fa-solid fa-hand-back-fist"></i></div>
+                <div class="paper"><i class="fa-solid fa-hand"></i></div>
+                <div class="scissors"><i class="fa-solid fa-hand-scissors"></i></div>
+            </div>
+            <div class="col">
+                <div class="msg"><p class="small">Make your move!</p></div>
+            </div>
+            <div class="col">
+                <div class="winner"><p></p></div>
+            </div>
+            <div class="col"><button class="reset">reset game</button></div>
         </div>
-        <div class="col">
-            <div class="msg"></div>
-        </div>
-        <div class="col">
-            <div class="winner"><p></p></div>
-        </div>
-        <div class="col"><button class="reset">RESET GAME</button></div>
+        <script type="text/javascript" src="rock-paper-scissors.js"></script>
     </div>
-    <script type="text/javascript" src="rock-paper-scissors.js"></script>
 </body>
 </html>
