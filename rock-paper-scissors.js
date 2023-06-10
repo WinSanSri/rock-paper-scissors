@@ -22,7 +22,6 @@ selectScissors.addEventListener('click', function() {
 
 //reset game when button is clicked
 resetBtn.addEventListener('click', function() {
-    showRounds.innerHTML = "0";
     showUserScore.innerHTML = "0";
     showComputerScore.innerHTML = "0";
     showWinner.innerHTML = "";
@@ -39,16 +38,13 @@ function game(userSelection) {
 
     //users selection
     const playerSelection = userSelection;
-    
-    //on round 5 get final score
-    if (parseInt(showRounds.innerHTML) >= 5) {
 
-        userScore = parseInt(showUserScore.innerHTML);
-        computerScore = parseInt(showComputerScore.innerHTML);
-        
-        if(userScore === computerScore) {
-            showWinner.innerHTML = 'It\'s a tie!';
-        }else if(userScore > computerScore) {
+    userScore = parseInt(showUserScore.innerHTML);
+    computerScore = parseInt(showComputerScore.innerHTML);
+    
+    //if player reaches score 5, they win
+    if (userScore === 5 || computerScore === 5) {
+        if(userScore > computerScore) {
             showWinner.innerHTML = 'Congrats, you won!';
         }else {
             showWinner.innerHTML = 'Sorry, you lose!';
@@ -77,10 +73,6 @@ function game(userSelection) {
         } else if(result === 'Tie') {
             console.log('NA')
         }
-
-        //keep adding 1 for each round
-        //make score integer
-        showRounds.innerHTML = parseInt(showRounds.innerHTML) + 1;
     }
 
 }
