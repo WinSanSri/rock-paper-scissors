@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-    font-family: 'Mansalva', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(61, 61, 61);
+    background-color: rgb(29, 24, 37);
+    font-family:'Dosis', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(221, 221, 221);
     padding: 0;
     margin: 0;
 }
@@ -16,17 +16,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: rgb(240, 240, 240);
-    border: solid 1px rgb(212, 212, 212);
+    padding: 10px;
+    background-color: rgb(29, 24, 37);
+    border: solid 1px rgb(48, 45, 53);
     border-radius: 5px;
     flex-wrap: wrap;
-    margin: 20px 0;
 }
 
 .col {
@@ -36,16 +36,13 @@ body {
 
 .score {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    padding: 0 30px;
-    border: solid 1px rgb(212, 212, 212);
-    border-radius: 5px;
-    background-color: rgb(233, 233, 233);
 }
 
 .user-score {
     font-weight: 900;
-    color: rgb(0, 0, 0);
+    color: rgb(221, 221, 221);
 }
 
 p {
@@ -67,23 +64,28 @@ p.small {
     padding: 10px;
 }
 
-.rock:hover, .paper:hover, .scissors:hover, button.reset:hover {
+.rock:hover, .paper:hover, .scissors:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
+button.reset:hover {
+    background-color: rgb(53, 24, 87);
+    cursor: pointer;
+}
+
 .fa-solid {
-    font-size: 5.5rem;
+    font-size: 5.2rem;
+    color: rgb(221, 221, 221);
 }
 
 button.reset {
-    padding: 10px;
-    font-size: 0.8rem;
-    background-color: rgb(39, 39, 39);
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    background-color: rgb(69, 32, 112);
     color: white;
     border: none;
     border-radius: 3px;
-    transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-weight: 800;
     font-family: 'Mansalva', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,6 +97,12 @@ h2 {
 
 footer {
     text-align: center;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: rgb(119, 0, 255);
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
